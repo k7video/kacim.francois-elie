@@ -1,0 +1,589 @@
+/* User defined */
+.csl-left-margin {color: var(--primary-color); float:left; margin-right:10px; overflow: hidden}
+
+/* Hack found in https://stackoverflow.com/questions/255170/markdown-and-image-alignment */
+
+.float-right {
+  float: right;
+  margin: 0 -20em 1em 1em;
+  max-width: 40%;
+}
+img { max-width: 100%; height: auto; }
+
+img[alt$=">"] {
+  float: right;
+  margin-left: 1em;
+  filter: drop-shadow(2px 2px 10px #000);
+}
+
+img[alt$="<"] {
+  float: left;
+}
+
+img[alt$="><"] {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 8em;
+  float: none!important;
+}
+
+
+
+:root {
+	--nc-font-sans:Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	--nc-font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
+
+	/* Light theme */
+	--nc-tx-1: #000000;
+	--nc-tx-2: #000;
+	--nc-bg-1: #FFFFFF;
+	--nc-bg-2: #F6F8FA;
+	--nc-bg-3: #E5E7EB;
+	--nc-lk-1: #000;
+	--nc-lk-2: #F9E400;
+	--nc-lk-tx: #FFFFFF;
+	--nc-ac-1: #967bb6;
+	--nc-ac-tx: #FFFFFF;
+
+	/* Dark theme */
+	--nc-d-tx-1: #ffffff;
+	--nc-d-tx-2: #eeeeee;
+	--nc-d-bg-1: #000000;
+	--nc-d-bg-2: #111111;
+	--nc-d-bg-3: #222222;
+	--nc-d-lk-1: #3291FF;
+	--nc-d-lk-2: #0070F3;
+	--nc-d-lk-tx: #FFFFFF;
+	--nc-d-ac-1: #7928CA;
+	--nc-d-ac-tx: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--nc-tx-1: var(--nc-d-tx-1);
+		--nc-tx-2: var(--nc-d-tx-2);
+		--nc-bg-1: var(--nc-d-bg-1);
+		--nc-bg-2: var(--nc-d-bg-2);
+		--nc-bg-3: var(--nc-d-bg-3);
+		--nc-lk-1: var(--nc-d-lk-1);
+		--nc-lk-2: var(--nc-d-lk-2);
+		--nc-lk-tx: var(--nc--dlk-tx);
+		--nc-ac-1: var(--nc-d-ac-1);
+		--nc-ac-tx: var(--nc--dac-tx);
+	}
+}
+
+* {
+	/* Reset margins and padding */
+	margin: 0;
+	padding: 0;
+}
+
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+img,
+meter,
+nav,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+section,
+table,
+textarea,
+ul,
+video {
+	/* Margins for most elements */
+	margin-bottom: 1rem;
+}
+
+html,input,select,button {
+	/* Set body font family and some finicky elements */
+	font-family: var(--nc-font-sans);
+}
+
+
+/* For mobile devices or more generally small devices */
+@media only screen and (max-width: 991px) {
+	body{
+   width: 85%;
+   }
+   p, li, ul, ol {
+   font-size: 1rem;
+   }
+
+   #refs {
+	font-size: 1rem;
+   }
+   
+   ol,
+   ul {
+	   /* Replace the browser default padding */
+	   padding-left: 0.5rem;
+   }
+   
+   h1 {
+	font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: .875rem;
+	}
+   
+   }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+body {
+	max-width: 750px;
+font-size: 1.15rem;
+	
+}
+p {
+
+}
+ol,
+ul {
+	/* Replace the browser default padding */
+	padding-left: 2rem;
+}
+
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.85rem;
+}
+
+h3 {
+	font-size: 1.55rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: .875rem;
+}
+
+}
+
+
+body {
+	/* Center body in page */
+	margin: 0 20px; 
+	padding: 2rem;
+	border-radius: 6px;
+	overflow-x: hidden;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+  	-moz-hyphens: auto;
+  	-ms-hyphens: auto;
+  	hyphens: auto;
+	overflow-wrap: break-word;
+	background: var(--nc-bg-1);
+
+	/* Main body text */
+	color: var(--nc-tx-2);
+	line-height: 1.7;
+	text-align: justify;
+}
+
+::selection {
+	/* Set background color for selected text */
+	background: var(--nc-ac-1);
+	color: var(--nc-ac-tx);
+}
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1;
+	color: var(--nc-tx-1);
+	padding-top: .875rem;
+}
+
+h1,
+h2,
+h3 {
+	color: var(--nc-tx-1);
+	padding-bottom: 10px;
+	margin-bottom: 8px;
+}
+
+h4,
+h5,
+h6 {
+	margin-bottom: .3rem;
+}
+
+a {
+	color: var(--nc-lk-1);
+	text-decoration: none;
+}
+
+/*
+a:hover {
+	color: #FFF;
+	background-color : var(--nc-lk-1)
+	
+}
+*/
+abbr:hover {
+	/* Set the '?' cursor while hovering an abbreviation */
+	cursor: help;
+}
+
+blockquote {
+	padding: 1.5rem;
+	background: var(--nc-bg-2);
+	border-left: 5px solid var(--nc-bg-3);
+}
+
+abbr {
+	cursor: help;
+}
+
+blockquote *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+header {
+	background: var(--nc-bg-2);
+	border-bottom: 1px solid var(--nc-bg-3);
+	padding: 2rem 1.5rem;
+	
+	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+
+	margin: -2rem calc(50% - 50vw) 2rem;
+
+	/* Shorthand for:
+
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw); */
+
+	padding-left: calc(50vw - 50%);
+	padding-right: calc(50vw - 50%);
+}
+
+header h1,
+header h2,
+header h3 {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+header > *:first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+header > *:last-child {
+	margin-bottom: 0;
+}
+
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 6px 12px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background: var(--nc-lk-1);
+	color: var(--nc-lk-tx);
+	border: 0;
+	border-radius: 4px;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: var(--nc-lk-tx);
+}
+
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	opacity: .5;
+
+	/* Set the [X] cursor while hovering a disabled link */
+	cursor: not-allowed;
+}
+
+.button:focus,
+.button:enabled:hover,
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+	background: var(--nc-lk-2);
+}
+
+a img {
+	margin-bottom: 0px;
+}
+
+code,
+pre,
+kbd,
+samp {
+	/* Set the font family for monospaced elements */
+	font-family: var(--nc-font-mono);
+}
+
+code,
+samp,
+kbd,
+pre {
+	/* The main preformatted style. This is changed slightly across different cases. */
+	background: var(--nc-bg-2);
+	border: 1px solid var(--nc-bg-3);
+	border-radius: 4px;
+	padding: 3px 6px;
+	/* ↓ font-size is relative to containing element, so it scales for titles*/
+	font-size: 0.9em;
+}
+
+kbd {
+	/* Makes the kbd element look like a keyboard key */
+	border-bottom: 3px solid var(--nc-bg-3);
+}
+
+pre {
+	padding: 1rem 1.4rem;
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre code {
+	/* When <code> is in a <pre>, reset it's formatting to blend in */
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+code pre {
+	/* When <pre> is in a <code>, reset it's formatting to blend in */
+	display: inline;
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+details {
+	/* Make the <details> look more "clickable" */
+	padding: .6rem 1rem;
+	background: var(--nc-bg-2);
+	border: 1px solid var(--nc-bg-3);
+	border-radius: 4px;
+}
+
+summary {
+	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+	cursor: pointer;
+	font-weight: bold;
+}
+
+details[open] {
+	/* Adjust the <details> padding while open */
+	padding-bottom: .75rem;
+}
+
+details[open] summary {
+	/* Adjust the <details> padding while open */
+	margin-bottom: 6px;
+}
+
+details[open]>*:last-child {
+	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd::before {
+	/* Add an arrow to data table definitions */
+	content: '→ ';
+}
+
+hr {
+	/* Reset the border of the <hr> separator, then set a better line */
+	border: 0;
+	border-bottom: 1px solid var(--nc-bg-3);
+	margin: 1rem auto;
+}
+
+fieldset {
+	margin-top: 1rem;
+	padding: 2rem;
+	border: 1px solid var(--nc-bg-3);
+	border-radius: 4px;
+}
+
+legend {
+	padding: auto .5rem;
+}
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: 1px solid var(--nc-bg-3);
+	text-align: left;
+	padding: .5rem;
+}
+
+th {
+	background: var(--nc-bg-2);
+}
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: var(--nc-bg-2);
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: .5rem;
+}
+
+textarea {
+	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+	max-width: 100%;
+}
+
+
+li {
+	margin-top: .4rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+
+mark {
+	padding: 3px 6px;
+	background: var(--nc-ac-1);
+	color: var(--nc-ac-tx);
+}
+
+textarea,
+select,
+input {
+	padding: 6px 12px;
+	margin-bottom: .5rem;
+	background: var(--nc-bg-2);
+	color: var(--nc-tx-2);
+	border: 1px solid var(--nc-bg-3);
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+a {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1.25px;      /* subtle */
+  text-underline-offset: 0.35em;          /* give it some breathing room */
+  text-decoration-skip-ink: auto;         /* avoid colliding with glyphs */
+
+  /* Fallback: if color-mix isn’t supported, this uses currentColor */
+  text-decoration-color: currentColor;
+}
+
+/* Soften the underline color where supported */
+@supports (text-decoration-color: color-mix(in srgb, red 50%, transparent)) {
+  a {
+    /* make the underline ~40% of the text color */
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  }
+}
+
+/* Optional: on hover/focus, make it solid for clarity */
+a:hover,
+a:focus-visible {
+  text-decoration-style: solid;
+  text-decoration-thickness: 2.5px;
+ text-underline-offset: 0.35em; 
+text-decoration-color: #945DC2;
+}
+
+/* Optional: dark mode – slightly stronger underline to remain visible */
+@media (prefers-color-scheme: dark) {
+  @supports (text-decoration-color: color-mix(in srgb, red 50%, transparent)) {
+    a { text-decoration-color: color-mix(in srgb, currentColor 55%, transparent); }
+  }
+}
+
+p {
+  line-height: 2; /* 1.6 × the font size */
+}

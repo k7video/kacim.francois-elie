@@ -1,5 +1,5 @@
 /* User defined */
-.csl-left-margin {color: var(--primary-color); float:left; margin-right:10px; overflow: hidden}
+.csl-left-margin {color: black; float:left; margin-right:10px; overflow: hidden}
 
 /* Hack found in https://stackoverflow.com/questions/255170/markdown-and-image-alignment */
 
@@ -586,4 +586,5 @@ text-decoration-color: #945DC2;
 
 p {
   line-height: 2; /* 1.6 × the font size */
+
 }

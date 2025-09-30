@@ -29,13 +29,19 @@
      I am currently studying the DPN acceleration method applied to the method of the characteristics (MOC), to solve the BTE for neutrons. 
      This research topic is related to nuclear reactor physics, more specifically to lattice calculations.<br/ >
      The MOC consists in the resolution of a PDE along characteristic curves (straight lines for instance as in Fig. (a)).
-     Solving along a characteristic curve reduce the PDE to an ODE which is practical for a bunch of reasons.
+     Solving along a characteristic curve reduce the PDE to an ODE, which is practical for a bunch of reasons.
      <p>
      <img src="CaracteristiquesSurEllipse.gif"  width="700" />
      </p>
+     When using numerical methods, one often use a mesh to partition the domain. When it comes to MOC, there is a transition
+     relation for the flux between two adjacent cell of a mesh, which allow a sweep, as illustrated in Fig. (b). <b/>
      <p>
      <img src="BalayageMOC.gif"  width="700" />
      </p>
+     In nuclear reactor physics, the domain of resolution for the BTE is the reactor core is usually very big. For this reason, computations are
+     very often divided in two separate steps: the lattice computation and the core computation.<b/>
+     The lattice step is made on small part of the domain (pin cell, assemblies of pins in Fig. (c)), and the core step is made on the whole core,
+     while using the results obtained on the previous step. <b/>
      <p>
      <img src="LatticeToCore.gif"  width="700" />
      </p>

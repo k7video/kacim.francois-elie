@@ -9,12 +9,13 @@ body {
   background: #000;
   color: #fff;
   font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
-  font-size: 1.2rem; /* taille un peu augmentée */
+  font-size: 1.2rem; /* un peu plus grand */
   line-height: 1.8;
-  text-align: left; /* texte aligné à gauche */
-  padding: 2rem;
-  margin: 0 auto;
-  max-width: 750px;
+  text-align: left; /* texte collé à gauche */
+  padding: 2rem; /* espace interne, tu peux réduire si tu veux coller encore plus */
+  margin: 0;      /* supprime toute marge externe */
+  max-width: none; /* plus de largeur limitée */
+  width: 100%;     /* occupe tout l’écran */
 }
 
 /* Titres */
@@ -33,7 +34,7 @@ h6 { font-size: .875rem; }
 
 /* Paragraphes et listes */
 p, li {
-  margin-bottom: 1.2rem; /* un peu plus d’espace */
+  margin-bottom: 1.2rem;
   line-height: 1.9;
 }
 

@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 
-/* For mobile devices or more generally small devices */
+/* For mobile devices or more generally small devices (smartphones + tablettes) */
 @media only screen and (max-width: 991px) {
   body {
-    width: 50%;
+    width: 85%;   /* largeur sur tablettes + smartphones */
     background: #000;
     color: #fff;
     font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
@@ -42,16 +42,16 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   body {
-    width: 50%;          /* tout le site prend 50% de l’écran */
+    width: 60%;          /* largeur réduite sur pc */
     max-width: none;
     background: #000;
     color: #fff;
     font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
     font-size: 1.2rem;   
     line-height: 1.8;
-    text-align: left;    /* collé à gauche */
+    text-align: left;    
     margin: 0;
-    padding: 2rem 3rem 2rem 2rem; /* espace interne */
+    padding: 2rem 3rem 2rem 2rem; 
   }
 
   ol, ul {
@@ -160,5 +160,3 @@ button {
 button:hover {
   background: #c79df7;
 }
-
-

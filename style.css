@@ -9,8 +9,9 @@ body {
   background: #000;
   color: #fff;
   font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
-  line-height: 1.7;
-  text-align: justify;
+  font-size: 1.2rem; /* taille un peu augmentée */
+  line-height: 1.8;
+  text-align: left; /* texte aligné à gauche */
   padding: 2rem;
   margin: 0 auto;
   max-width: 750px;
@@ -32,8 +33,8 @@ h6 { font-size: .875rem; }
 
 /* Paragraphes et listes */
 p, li {
-  margin-bottom: 1rem;
-  line-height: 2;
+  margin-bottom: 1.2rem; /* un peu plus d’espace */
+  line-height: 1.9;
 }
 
 ol, ul {

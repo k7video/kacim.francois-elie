@@ -5,7 +5,65 @@
   box-sizing: border-box;
 }
 
+/* For mobile devices or more generally small devices */
+@media only screen and (max-width: 991px) {
+	body{
+   width: 85%;
+   }
+   p, li, ul, ol {
+   font-size: 1rem;
+   }
+
+   #refs {
+	font-size: 1rem;
+   }
+   
+   ol,
+   ul {
+	   /* Replace the browser default padding */
+	   padding-left: 0.5rem;
+   }
+   
+   h1 {
+	font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: .875rem;
+	}
+   
+   }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 body {
+	max-width: 750px;
+font-size: 1.15rem;
+	
+}
+p {
+
+}
+ol,
+ul {
+	/* Replace the browser default padding */
+	padding-left: 2rem;
+}
   background: #000;
   color: #fff;
   font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
@@ -125,3 +183,4 @@ button {
 button:hover {
   background: #c79df7;
 }
+

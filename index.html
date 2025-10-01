@@ -34,13 +34,13 @@
      <p>
      <img src="CaracteristiquesSurEllipse.gif"  width="700" />
      </p>
-     When using numerical methods, one often use a mesh to partition the domain. When it comes to MOC, there is a transition
-     relation for the flux between two adjacent cell of a mesh, which allow a sweep, as illustrated in Fig. (b). <br/>
+     When using numerical methods, one often uses a mesh to partition the domain. When it comes to MOC, there is a transition
+     relation for the flux between two adjacent cell of a mesh, which allow a propagation of information (sweep), as illustrated in Fig. (b). <br/>
      <p>
      <img src="BalayageMOC.gif"  width="700" />
      </p>
-     In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very big. For this reason, computations are
-     very often divided in two separate steps: the lattice computation and the core computation.<br/>
+     In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very big. In order to save
+     computational time, numerical calculations are very often divided in two separate steps: the lattice computation and the core computation.<br/>
      The lattice step is made on small parts of the domain (pin cell, assemblies of pins in Fig. (c)), and the core step is made on the whole core,
      while using the results obtained on the previous step.<br/>
      MOC takes place at the lattice step.

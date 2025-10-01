@@ -7,75 +7,56 @@
 
 /* For mobile devices or more generally small devices */
 @media only screen and (max-width: 991px) {
-	body{
-   width: 85%;
-   }
-   p, li, ul, ol {
-   font-size: 1rem;
-   }
+  body {
+    width: 85%;
+    background: #000;
+    color: #fff;
+    font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
+    padding: 1rem;
+  }
 
-   #refs {
-	font-size: 1rem;
-   }
-   
-   ol,
-   ul {
-	   /* Replace the browser default padding */
-	   padding-left: 0.5rem;
-   }
-   
-   h1 {
-	font-size: 2rem;
-	}
+  p, li, ul, ol {
+    font-size: 1rem;
+  }
 
-	h2 {
-		font-size: 1.5rem;
-	}
+  #refs {
+    font-size: 1rem;
+  }
 
-	h3 {
-		font-size: 1.2rem;
-	}
+  ol, ul {
+    padding-left: 0.5rem;
+  }
 
-	h4 {
-		font-size: 1.25rem;
-	}
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: .875rem; }
+}
 
-	h5 {
-		font-size: 1rem;
-	}
-
-	h6 {
-		font-size: .875rem;
-	}
-   
-   }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-body {
-	max-width: 750px;
-font-size: 1.15rem;
-	
-}
-p {
+  body {
+    width: 70%;          /* tout le site prend 70% de l’écran */
+    max-width: none;
+    background: #000;
+    color: #fff;
+    font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
+    font-size: 1.2rem;   /* texte plus grand */
+    line-height: 1.8;
+    text-align: left;    /* collé à gauche */
+    margin: 0;
+    padding: 2rem 3rem 2rem 2rem; /* espace interne */
+  }
 
-}
-ol,
-ul {
-	/* Replace the browser default padding */
-	padding-left: 2rem;
-}
-  background: #000;
-  color: #fff;
-  font-family: Menlo, Monaco, "Lucida Console", monospace, sans-serif;
-  font-size: 1.2rem;   /* texte plus grand */
-  line-height: 1.8;
-  text-align: left;    /* collé à gauche */
-  
-  margin: 0;
-  padding: 2rem 3rem 2rem 2rem; /* espace interne (haut, droite, bas, gauche) */
-  
-  width: 70%;          /* colonne de lecture */
-  max-width: none;     /* pas de limite fixe */
+  ol, ul {
+    padding-left: 2rem;
+  }
 }
 
 /* Titres */
@@ -96,10 +77,6 @@ h6 { font-size: .875rem; }
 p, li {
   margin-bottom: 1.2rem;
   line-height: 1.9;
-}
-
-ol, ul {
-  padding-left: 2rem;
 }
 
 li {
@@ -183,4 +160,3 @@ button {
 button:hover {
   background: #c79df7;
 }
-

@@ -8,49 +8,49 @@
   </head>
   <body>
      <h1 id="webpage-of-k.f-e">Webpage of K. François-Elie</h1>
-     <p>My name is Kacim François-Elie, and I am a <em>PhD Student</em> at
+     <p>My name is Kacim François-Elie, and I am a <em>PhD student</em> at
      CEA/Université Paris-Saclay, under the supervision of <a href="mailto:alain.mazzolo@cea.fr"> Alain Mazzolo</a> and 
      <a href="mailto:simone.santandrea@cea.fr"> Simone Santandrea</a>, working at <a 
      href="https://www.pluginlabs-universiteparissaclay.fr/fiche/service-detudes-des-reacteurs-et-de-mathematiques-appliquees-serma/"> SERMA</a> 
-     (french acronym for Department of Reactor Studies and Applied Mathematics) since November 2022. <br />
-     I am a former student of the Ecole des Mines de Nancy where I specialized in Mathematical Engineering.<br />
+     (French acronym for Department of Reactor Studies and Applied Mathematics) since November 2022. <br />
+     I am a former student of the École des Mines de Nancy where I specialized in Mathematical Engineering.<br />
      You can contact me at:
      <em>firstname.name_initials@gmail.com</em></p>
-     Here is a short list of the courses that I followed during my master and my PhD:<br/>
+     Here is a short list of the courses I took during my master and my PhD:<br/>
      <li> Elliptic PDEs (M2)
-     <li> Semi groups theory (M2)
+     <li> Semigroup theory (M2)
      <li> Lie algebras and Lie groups (M2)
      <li> Stochastic processes (M2)
      <li> Large Random Matrices and PDEs (PhD)
      <li> Differential Geometry for Mechanics (PhD)
      <li> Numerical methods for nuclear reactor physics (PhD) <br/>
-     <h2 id="research-interests">Research interests</h2>
+     <h2 id="research-interests">Research Interests</h2>
      <ul>
      <li>Theory and numerics of <a
      href="https://en.wikipedia.org/wiki/Boltzmann_equation">Boltzmann Transport Equation</a> (BTE)
      <li>Convergence analysis and estimators
      <li>Numerical methods for Partial Differential Equations (PDEs) and Ordinary Differential Equations (ODEs)
-     <li>Acceleration methods of numerical schemes
+     <li>Acceleration methods for numerical schemes
      <!-- end of list -->
      <p> </p>
      <h2 id="about-research">About my research</h2>
      I am currently investigating the DPN acceleration method applied to the method of the characteristics (MOC) for solving the BTE for neutrons. 
      This research is related to nuclear reactor physics, specifically lattice calculations.<br/ >
-     The MOC consists in the resolution of a PDE along characteristic curves. In Fig. (a) a set of straight lines characteristics is represented, for two directions
+     The MOC consists of solving a PDE along characteristic curves. In Fig. (a) a set of straight lines characteristics is represented, for two directions
      on a domain D.
      Solving along a characteristic curve reduces the PDE to an ODE, which is useful for a bunch of reasons.
      <p>
      <img src="CaracteristiquesSurEllipse.gif"  width="700" />
      </p>
      When using numerical methods, one often uses a mesh to partition the domain. When it comes to MOC, there is a transition
-     relation for the flux along a characteristic curve <em>t</em> between two adjacent cell of a mesh, which allow a propagation of information (sweep), as illustrated in Fig. (b). <br/>
+     relation for the flux along a characteristic curve <em>t</em> between two adjacent cells of a mesh, which allows a propagation of information (sweep), as illustrated in Fig. (b). <br/>
      <p>
      <img src="BalayageMOC.gif"  width="700" />
      </p>
      In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very big. In order to save
-     computational time, numerical calculations are very often divided in two separate steps: the lattice computation and the core computation.<br/>
-     The lattice step is made on small parts of the domain (pin cell, assemblies of pins as in Fig. (c)), and the core step is made on the whole core,
-     while using the results obtained on the previous step.<br/>
+     computational time, numerical calculations are very often divided into two separate steps: the lattice computation and the core computation.<br/>
+     The lattice step is performed on small parts of the domain (pin cell, assemblies of pins as in Fig. (c)), and the core step is made on the whole core,
+     while using the results obtained in the previous step.<br/>
      MOC takes place at the lattice step.
      <p>
      <img src="LatticeToCore.gif"  width="700" />

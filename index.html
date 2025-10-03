@@ -36,9 +36,9 @@
      <h2 id="about-research">About my research</h2>
      I am currently investigating the DPN acceleration method applied to the method of the characteristics (MOC) for solving the BTE for neutrons. 
      This research is related to nuclear reactor physics, specifically lattice calculations.<br/ >
-     The MOC consists of solving a PDE along characteristic curves. In Fig. (a) a set of straight lines characteristics is represented, for two directions
-     on a domain D.
-     Solving along a characteristic curve reduces the PDE to an ODE, which is useful for a bunch of reasons.
+     The MOC consists of solving a PDE along characteristic curves. In Fig. (a) a set of straight-line characteristics is represented, for two directions
+     within a domain <em>D</em>.
+     Solving along a characteristic curve reduces the PDE to an ODE, which is useful for several reasons.
      <p>
      <img src="CaracteristiquesSurEllipse.gif"  width="700" />
      </p>
@@ -47,10 +47,10 @@
      <p>
      <img src="BalayageMOC.gif"  width="700" />
      </p>
-     In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very big. In order to save
+     In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very large. In order to save
      computational time, numerical calculations are very often divided into two separate steps: the lattice computation and the core computation.<br/>
-     The lattice step is performed on small parts of the domain (pin cell, assemblies of pins as in Fig. (c)), and the core step is made on the whole core,
-     while using the results obtained in the previous step.<br/>
+     The lattice step is performed on small parts of the domain (pin cell, assemblies of pins) as shown in Fig. (c). The core step is then performed (on the whole core),
+     using the results obtained during the lattice step.<br/>
      MOC takes place at the lattice step.
      <p>
      <img src="LatticeToCore.gif"  width="700" />

@@ -1,101 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<title>Webpage of Kacim François-Elie</title>
- <meta charset="UTF-8">
-      <link rel="stylesheet" href="style.css"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage of Kacim François-Elie</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      .tab-bar {
+        margin-bottom: 16px;
+      }
+      .tab-btn {
+        font-size: 1em;
+        font-family: inherit;
+        background: none;
+        border: none;
+        border-bottom: 2px solid transparent;
+        padding: 4px 12px 4px 0;
+        cursor: pointer;
+        color: #0000EE;
+        text-decoration: underline;
+      }
+      .tab-btn.active {
+        color: black;
+        text-decoration: none;
+        border-bottom: 2px solid black;
+        font-weight: bold;
+        cursor: default;
+      }
+      .tab-btn:not(.active):hover {
+        color: #551A8B;
+      }
+      .tab-panel {
+        display: none;
+      }
+      .tab-panel.active {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-     <h1 id="webpage-of-k.f-e">Webpage of K. François-Elie</h1>
-     <p>My name is Kacim François-Elie, and I am a <em>PhD student</em> at
-     CEA/Université Paris-Saclay, under the supervision of <a href="mailto:alain.mazzolo@cea.fr"> Alain Mazzolo</a> and 
-     <a href="mailto:simone.santandrea@cea.fr"> Simone Santandrea</a>, working at <a 
-     href="https://www.pluginlabs-universiteparissaclay.fr/fiche/service-detudes-des-reacteurs-et-de-mathematiques-appliquees-serma/"> SERMA</a> 
-     (French acronym for Department of Reactor Studies and Applied Mathematics) since November 2022. <br />
-     I am a former student of the École des Mines de Nancy where I specialized in Mathematical Engineering.<br />
-     You can contact me at: <em>k.francois-elie*at*proton*dot*me</em></p>
-     <!--
-     <em>firstname*dot*name_initials*at*gmail*dot*com</em></p>
-     -->
-     Here is a short list of the courses I took during my master and my PhD:<br/>
-     <li> Elliptic PDEs (M2)
-     <li> Semigroup theory (M2)
-     <li> Lie algebras and Lie groups (M2)
-     <li> Stochastic processes (M2)
-     <li> Large Random Matrices and PDEs (PhD)
-     <li> Differential Geometry for Mechanics (PhD)
-     <li> Numerical methods for nuclear reactor physics (PhD) <br/>
-     <h2 id="research-interests">Research Interests</h2>
-     <ul>
-     <li>Theory and numerics of <a
-     href="https://en.wikipedia.org/wiki/Boltzmann_equation">Boltzmann Transport Equation</a> (BTE)
-     <li>Convergence analysis and estimators
-     <li>Numerical methods for Partial Differential Equations (PDEs) and Stochatic Differential Equations (SDEs) <!-- Ordinary Differential Equations (ODEs)-->
-     <li>Acceleration methods for numerical schemes
-     <!-- end of list -->
-     <p> </p>
-     <h2 id="about-research">About my research</h2>
-     I am currently investigating the DPN acceleration method applied to the method of the characteristics (MOC) for solving the BTE for neutrons. 
-     This research is related to nuclear reactor physics, specifically lattice calculations.<br/ >
-     The MOC consists of solving a PDE along characteristic curves. In Fig. (a) a set of straight-line characteristics is represented, for two directions
-     within a domain <em>D</em>.
-     Solving along a characteristic curve reduces the PDE to an Ordinary Differential Equation (ODE), which is useful for several reasons.
-     <p>
-     <img src="CaracteristiquesSurEllipse.gif"  width="700" />
-     </p>
-     When using numerical methods, one often uses a mesh to partition the domain. When it comes to MOC, there is a transition
-     relation for the flux along a characteristic curve <em>t</em> between two adjacent cells of a mesh, which allows a propagation of information (sweep), as illustrated in Fig. (b). <br/>
-     <p>
-     <img src="BalayageMOC.gif"  width="700" />
-     </p>
-     In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very large. In order to save
-     computational time, numerical calculations are very often divided into two separate steps: the lattice computation and the core computation.<br/>
-     The lattice step is performed on small parts of the domain (pin cell, assemblies of pins) as shown in Fig. (c). The core step is then performed (on the whole core),
-     using the results obtained during the lattice step.<br/>
-     MOC takes place at the lattice step.
-     <p>
-     <img src="LatticeToCore.gif"  width="700" />
-     </p>
-     <h2 id="publications">Publications</h2>
-     <div id="refs" class="references csl-bib-body"
-     data-entry-spacing="0" role="list">
-     <!--
-     <div id="ref-caprais_francois-elie_tomatis" class="csl-entry" role="listitem">
-     <div class="csl-left-margin">[1] </div><div
-     class="csl-right-inline">M. Caprais, K. Francois-Elie, D. Tomatis, One-dimensional 
-     gas-fueled nuclear reactor with thermal feedback, (2024). https://doi.org/<a
-     href="https://arxiv.org/abs/2407.12530">10.48550/arXiv.2407.12530</a>.</div>
-     </div> à réviser
-     -->
+    <h1 id="webpage-of-k.f-e">Webpage of K. François-Elie</h1>
 
-     <div id="ref-francois-elie_mazzolo" class="csl-entry" role="listitem">
-     <div class="csl-left-margin">[1] </div><div
-     class="csl-right-inline">K. Francois-Elie, A. Mazzolo, Conditioning the tanh-drift process and related
+    <div class="tab-bar">
+      <button class="tab-btn active" data-target="tab-presentation">Presentation</button>
+      <button class="tab-btn" data-target="tab-publications">Publications</button>
+    </div>
+
+    <!-- ── PRESENTATION ── -->
+    <div id="tab-presentation" class="tab-panel active">
+
+      <p>My name is Kacim François-Elie, and I am a <em>PhD student</em> at
+      CEA/Université Paris-Saclay, under the supervision of <a href="mailto:alain.mazzolo@cea.fr"> Alain Mazzolo</a> and 
+      <a href="mailto:simone.santandrea@cea.fr"> Simone Santandrea</a>, working at <a 
+      href="https://www.pluginlabs-universiteparissaclay.fr/fiche/service-detudes-des-reacteurs-et-de-mathematiques-appliquees-serma/"> SERMA</a> 
+      (French acronym for Department of Reactor Studies and Applied Mathematics) since November 2022. <br />
+      I am a former student of the École des Mines de Nancy where I specialized in Mathematical Engineering.<br />
+      You can contact me at: <em>k.francois-elie*at*proton*dot*me</em></p>
+
+      Here is a short list of the courses I took during my master and my PhD:<br/>
+      <li> Elliptic PDEs (M2)
+      <li> Semigroup theory (M2)
+      <li> Lie algebras and Lie groups (M2)
+      <li> Stochastic processes (M2)
+      <li> Large Random Matrices and PDEs (PhD)
+      <li> Differential Geometry for Mechanics (PhD)
+      <li> Numerical methods for nuclear reactor physics (PhD) <br/>
+
+      <h2 id="research-interests">Research Interests</h2>
+      <ul>
+      <li>Theory and numerics of <a
+      href="https://en.wikipedia.org/wiki/Boltzmann_equation">Boltzmann Transport Equation</a> (BTE)
+      <li>Convergence analysis and estimators
+      <li>Numerical methods for Partial Differential Equations (PDEs) and Stochatic Differential Equations (SDEs)
+      <li>Acceleration methods for numerical schemes
+      </ul>
+
+      <p> </p>
+      <h2 id="about-research">About my research</h2>
+      I am currently investigating the DPN acceleration method applied to the method of the characteristics (MOC) for solving the BTE for neutrons. 
+      This research is related to nuclear reactor physics, specifically lattice calculations.<br/>
+      The MOC consists of solving a PDE along characteristic curves. In Fig. (a) a set of straight-line characteristics is represented, for two directions
+      within a domain <em>D</em>.
+      Solving along a characteristic curve reduces the PDE to an Ordinary Differential Equation (ODE), which is useful for several reasons.
+      <p>
+      <img src="CaracteristiquesSurEllipse.gif" width="700" />
+      </p>
+      When using numerical methods, one often uses a mesh to partition the domain. When it comes to MOC, there is a transition
+      relation for the flux along a characteristic curve <em>t</em> between two adjacent cells of a mesh, which allows a propagation of information (sweep), as illustrated in Fig. (b). <br/>
+      <p>
+      <img src="BalayageMOC.gif" width="700" />
+      </p>
+      In nuclear reactor physics, the domain of resolution for the BTE is the reactor core which is usually very large. In order to save
+      computational time, numerical calculations are very often divided into two separate steps: the lattice computation and the core computation.<br/>
+      The lattice step is performed on small parts of the domain (pin cell, assemblies of pins) as shown in Fig. (c). The core step is then performed (on the whole core),
+      using the results obtained during the lattice step.<br/>
+      MOC takes place at the lattice step.
+      <p>
+      <img src="LatticeToCore.gif" width="700" />
+      </p>
+
+    </div>
+
+    <!-- ── PUBLICATIONS ── -->
+    <div id="tab-publications" class="tab-panel">
+
+      <h2 id="publications">Publications</h2>
+      <div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list">
+
+        <div id="ref-francois-elie_mazzolo" class="csl-entry" role="listitem">
+        <div class="csl-left-margin">[1] </div><div
+        class="csl-right-inline">K. Francois-Elie, A. Mazzolo, Conditioning the tanh-drift process and related
 diffusions on first-passage times: Exact drifts, bridges, and process equivalences, <em>Journal of Mathematical Physics</em> (2026). 
-       https://doi.org/<a
-     href="https://doi.org/10.1063/5.0319005">10.1063/5.0319005</a>.</div>
-     </div>
-     </div>
+          https://doi.org/<a
+        href="https://doi.org/10.1063/5.0319005">10.1063/5.0319005</a>.</div>
+        </div>
 
-     <div id="ref-francois-elieo" class="csl-entry" role="listitem">
-     <div class="csl-left-margin">[2] </div><div
-     class="csl-right-inline">K. Francois-Elie, Synthetic acceleration for a high order surface scheme with the method of characteristics for the neutron transport equation, <em>Université Paris-Saclay</em> (2026). 
-       https://theses.hal.science/<a
-     href="https://theses.hal.science/tel-05634845v1">tel-05634845v1</a>.</div>
-     </div>
-     </div>
-       
-     <div id="ref-francois-elie_santandrea_" class="csl-entry"
-     role="listitem">
-     <div class="csl-left-margin">[3] </div><div
-     class="csl-right-inline">K. Francois-Elie, S. Santandrea, Acceleration of an 
-     improved linear scheme for the neutron transport, <em>Conference paper</em> (2024). https://doi.org/<a
-     href="https://www.epj-conferences.org/articles/epjconf/abs/2024/12/epjconf_snamc2024_02008/epjconf_snamc2024_02008.html">10.1051/epjconf/202430202008</a>.</div>
-     </div>
+        <div id="ref-francois-elieo" class="csl-entry" role="listitem">
+        <div class="csl-left-margin">[2] </div><div
+        class="csl-right-inline">K. Francois-Elie, Synthetic acceleration for a high order surface scheme with the method of characteristics for the neutron transport equation, <em>Université Paris-Saclay</em> (2026). 
+          https://theses.hal.science/<a
+        href="https://theses.hal.science/tel-05634845v1">tel-05634845v1</a>.</div>
+        </div>
 
+        <div id="ref-francois-elie_santandrea_" class="csl-entry" role="listitem">
+        <div class="csl-left-margin">[3] </div><div
+        class="csl-right-inline">K. Francois-Elie, S. Santandrea, Acceleration of an 
+        improved linear scheme for the neutron transport, <em>Conference paper</em> (2024). https://doi.org/<a
+        href="https://www.epj-conferences.org/articles/epjconf/abs/2024/12/epjconf_snamc2024_02008/epjconf_snamc2024_02008.html">10.1051/epjconf/202430202008</a>.</div>
+        </div>
 
+      </div>
+      <p> </p>
 
-     <p> </p>
+    </div>
+
+    <script>
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.target).classList.add('active');
+        });
+      });
+    </script>
   </body>
 </html>
